@@ -62,4 +62,32 @@ public class AmazonStepdefinitions {
         String actualSonucYazisi = amazonPage.sonucYaziElementi.getText();
         Assert.assertTrue(actualSonucYazisi.contains(expectedIcerik));
     }
+
+    @Then("arama kutusuna {string} yazip, ENTER tusuna basar")
+    public void aramaKutusunaYazipENTERTusunaBasar(String aranacakUrun) {
+        amazonPage.aramaKutusu.sendKeys(aranacakUrun + Keys.ENTER);
+    }
+
+    @And("arama sonuclarinin {string} icerdigini test eder")
+    public void aramaSonuclarininIcerdiginiTestEder(String aranacakIcerik) {
+        String actualSonucYazisi = amazonPage.sonucYaziElementi.getText();
+        Assert.assertTrue(actualSonucYazisi.contains(aranacakIcerik));
+    }
+
+    @And("{int} saniye bekler")
+    public void saniyeBekler(int beklemeSuresi) {
+
+        try {
+            Thread.sleep(beklemeSuresi*1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        
+    }
+
+    @Given("kullanici {string} ana sayfaya gider")
+    public void kullaniciAnaSayfayaGider(String istenenUrl) {
+
+        Driver.getDriver().get(ConfigReader.getProperty("istenenUrl"));
+    }
 }
