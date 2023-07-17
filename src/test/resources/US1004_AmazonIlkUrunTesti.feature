@@ -1,5 +1,5 @@
 Feature: US1004 amazonda listeden ilk urunun dogru oldugunu test eder
-  @wip
+  @veysel
   Scenario: TC08 ilk urun ismi arattirdigimiz kelimeyi icermeli
 
     Given kullanici "amazonUrl" ana sayfaya gider
