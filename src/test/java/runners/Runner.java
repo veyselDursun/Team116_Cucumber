@@ -14,9 +14,9 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources",
         glue = "stepdefinitions",
-        tags = "@herok",
+        tags = "@smoke",
 
-        dryRun = true
+        dryRun = false
 
 )
 
