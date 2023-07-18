@@ -13,12 +13,14 @@ public class AutomationExerciseStepdefinitions {
     AutoExercisePage autoExercisePage = new AutoExercisePage();
     Faker faker = new Faker();
 
+
     @Given("user sign up linkine tiklar")
     public void user_sign_up_linkine_tiklar() {
         autoExercisePage.ilkSignupButonu.click();
     }
     @Given("user Create an account bölümüne email adresi girer")
     public void user_create_an_account_bölümüne_email_adresi_girer() {
+
 
         autoExercisePage.nameKutusu.sendKeys(faker.name().username());
         autoExercisePage.emailKutusu.sendKeys(faker.internet().emailAddress());

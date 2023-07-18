@@ -1,5 +1,5 @@
 Feature: US1006 Kullanici yanlis bilgilerle giris yapamaz
-@veysel
+ @smoke
   Scenario: TC10 kullanici gecerli username ve gecersiz password ile giris yapamamali
 
     Given kullanici "qdUrl" anasayfaya gider

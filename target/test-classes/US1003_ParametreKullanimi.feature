@@ -1,4 +1,3 @@
-
 Feature: US1003 Amazonda Parametre olarak urun arama
 
   Scenario: TC07 Parametre olarak girilen urun arama

@@ -1,5 +1,4 @@
 Feature: Amazonda verilen toplu olarak verilen kelimeleri aratir
-
   @wip
   Scenario Outline: TC13 Kullanici listedeki tum urunler icin testi tekrarlayabilmeli
 

@@ -1,9 +1,8 @@
-
 Feature: US1003 Amazonda Parametre olarak urun arama
 
   Scenario: TC07 Parametre olarak girilen urun arama
 
-    Given kullanici "amazonUrl" ana sayfaya gider
+    Given kullanici "amazonUrl" anasayfaya gider
     Then arama kutusuna "Cokokrem" yazip, ENTER tusuna basar
     And arama sonuclarinin "Cokokrem" icerdigini test eder
     And 5 saniye bekler

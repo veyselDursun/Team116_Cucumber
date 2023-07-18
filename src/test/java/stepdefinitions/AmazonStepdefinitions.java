@@ -14,10 +14,7 @@ public class AmazonStepdefinitions {
 
     AmazonPage amazonPage = new AmazonPage();
 
-    @Given("kullanici amazon anasayfaya gider")
-    public void kullanici_amazon_anasayfaya_gider() {
-        Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
-    }
+
     @Then("arama kutusuna Nutella yazip, ENTER tusuna basar")
     public void arama_kutusuna_nutella_yazip_enter_tusuna_basar() {
 
@@ -98,4 +95,10 @@ public class AmazonStepdefinitions {
 
         Assert.assertTrue(amazonPage.ilkUrunIsimElementi.getText().contains(istenenIcerik));
     }
+
+    @Given("kullanici amazon anasayfaya gider")
+    public void kullaniciAmazonAnaSayfayaGider() {
+        Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
+    }
+
 }

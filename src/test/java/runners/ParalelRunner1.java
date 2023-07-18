@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
     @CucumberOptions(
 
             plugin = {"html:target/Paralel-reports1.html",
-                    "json:target/json-Paralel-reports/cucumber1.json",
-                    "junit:target/xml-Paralel-report/cucumber1.xml"
+                    "json:target/json-reports/cucumber1.json",
+                    "junit:target/xml-report/cucumber1.xml"
             },
             features = "src/test/resources",
             glue = "stepdefinitions",
